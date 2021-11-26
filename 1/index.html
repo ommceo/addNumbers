@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Calculator</title>
+    <!-- Start CSS -->
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        body{
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        section{
+            max-width: 580px;
+            position: relative;
+            margin: auto;
+        }
+        section h1{
+            text-align: center;
+            letter-spacing: 10px;
+            margin: 2rem;
+        }
+        section input{
+            padding: 10px;
+            text-align: center;
+            font-size: 20px;
+        }
+        section #btn{
+            width: 150px;
+            padding: 8px;
+            margin: 20px 0 0 203px;
+        }
+    </style>
+</head>
+<body>
+
+    <section>
+        <h1>Add Calculator</h1>
+        <input type="number" id="nm1"> +
+        <input type="number" id="nm2">
+        <button id="btn">Answer</button>
+    </section>
+
+    <!-- Start JavaScript -->
+    <script>
+        var btn = document.getElementById('btn');
+        btn.addEventListener('click', function(){
+            var num1 = document.getElementById('nm1').value;
+            var num2 = document.getElementById('nm2').value;
+            alert(Number(num1)+Number(num2));
+        })
+    </script>
+    
+</body>
+</html>
